@@ -12,7 +12,7 @@ if hour < 0 then hour = hour + 12 -- adjust hour to a non-negative number
 elseif hour > 12 then hour = hour - 12 -- adjust to AM/PM time (non-military)
 elseif hour == 0 then hour = 12 end -- make 0 hour a 12
 minute = math.floor(TIME.minute) -- round TIME>minute
-tick = TIME.second%2 -- load colon variable to tick at 1hz
+tick = TIME.second%2 -- load colon variable to tick at 1/2hz
 
 -- break hour and minute into 4 variables for display
 thr = math.floor(hour/10)
